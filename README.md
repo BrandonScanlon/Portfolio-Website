@@ -64,19 +64,19 @@ Indented code
   
 Block code "fences"
 
-'''
+```
 Sample text here...
-'''
+```
 
 Syntax highliting
 
-''' js
+``` js
 var foo = function (bar) {
   return bar++;
 };
   
 console.log(foo(5));
-'''
+```
 
 ##tables
 
