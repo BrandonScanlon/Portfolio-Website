@@ -95,11 +95,9 @@ right aligned columns
 | ext    | extension to be used for dest files. |
 
 
-## Links
+## Link
 
-[link text] (http://dev.nodeca.com)
-
-[link with title] (http://nodeca.github.io/pica/demo/ "title text!")
+[LinkedIn](http://dev.nodeca.com](https://www.linkedin.com/in/brandon-scanlon/ "LinkedIn")
 
 ## Images
 
