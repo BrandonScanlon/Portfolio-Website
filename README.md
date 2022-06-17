@@ -103,6 +103,6 @@ right aligned columns
 
 ## Images
 
-! [Engagement] (https://raw.githubusercontent.com/BrandonS389/brandonscanlon.io/main/Engagement1.jpg)
+! [Engagement](https://raw.githubusercontent.com/BrandonS389/brandonscanlon.io/main/Engagement1.jpg)
 
 ## The End!
