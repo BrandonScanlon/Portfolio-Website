@@ -7,6 +7,28 @@ interface DesktopProps {
   onOpenFile: (file: ProjectFile) => void;
 }
 
+const startProject: ProjectFile[] = [
+    {
+      id: 'start',
+      title: 'Starts',
+      icon: './icons/folder.png',
+      type: 'folder',
+      files: [
+        {
+          id: 'start1',
+          title: 'Welcome',
+          icon: './icons/document.png',
+          type: 'document',
+          content: {
+            description: "Hi there, welcome to my portfolio! I'm a software developer with a passion for creating innovative solutions. Feel free to explore my projects and reach out if you have any questions. To get started, think of this as a traditional Windows Desktop interface. You can click on any folder to open",
+            technologies: ["Senior Software Engineer", "Full Stack Engineer"],
+            image: "./icons/white.png",
+          }
+        },
+    ]
+    },
+];
+
 const Desktop: React.FC<DesktopProps> = ({ projects, onOpenFile }) => {
   const [currentTime, setCurrentTime] = useState<string>('');
 
@@ -30,7 +52,7 @@ const Desktop: React.FC<DesktopProps> = ({ projects, onOpenFile }) => {
   return (
     <div className="desktop">
       <div className="taskbar">
-        <div className="start-button">Start</div>
+        <div className="start-button" onClick={() => onOpenFile(startProject[0])}>Start</div>
         <div className="system-tray">
           <div className="clock">{currentTime}</div>
         </div>
