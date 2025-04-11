@@ -20,8 +20,8 @@ const startProject: ProjectFile[] = [
           icon: './icons/document.png',
           type: 'document',
           content: {
-            description: "Hi there, welcome to my portfolio! I'm a software developer with a passion for creating innovative solutions. Feel free to explore my projects and reach out if you have any questions. To get started, think of this as a traditional Windows Desktop interface. You can click on any folder to open",
-            technologies: ["Senior Software Engineer", "Full Stack Engineer"],
+            description: "Hi there, welcome to my portfolio! I'm a Software Engineer with a passion for creating innovative solutions. Feel free to explore my projects and reach out if you have any questions. To get started, think of this as a traditional Windows Desktop interface. You can click on any folder to open it and browse my experience!",
+            technologies: ["Senior Software Engineer", "Full Stack Engineer", "bdscanlon11@gmail.com"],
             image: "./icons/white.png",
           }
         },
