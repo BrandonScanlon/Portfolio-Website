@@ -10,7 +10,7 @@ interface DesktopProps {
 const startProject: ProjectFile[] = [
     {
       id: 'start',
-      title: 'Starts',
+      title: 'Start',
       icon: './icons/folder.png',
       type: 'folder',
       files: [
