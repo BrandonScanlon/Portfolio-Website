@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import Desktop from './components/Desktop';
 import Window from './components/Window';
 import ProjectFile from './models/ProjectFile';
+import MobileWarning from './components/MobileWarning';
 
 const App: React.FC = () => {
   const [openWindows, setOpenWindows] = useState<ProjectFile[]>([]);
-  
+  const [isMobile, setIsMobile] = useState(false); // Add mobile state
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ) || window.innerWidth < 768
+      );
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const projects: ProjectFile[] = [
     {
       id: 'projects',
@@ -16,13 +32,13 @@ const App: React.FC = () => {
       files: [
         {
           id: 'proj1',
-          title: 'Coming Soon!',
-          icon: './icons/white.png',
+          title: 'Off-Grid Biogenic Refinery',
+          icon: './icons/document.png',
           type: 'document',
           content: {
-            description: '',
-            technologies: [],
-            image: './icons/white.png',
+            description: 'At Biomass Controls PBC, I was challenged with developing a system that would provide an HMI application for users to control and monitor an embedded control system, operated completely off grid. The system I designed featured these requirements, complete with data acquisition, analytics, storing and forwarding the data for days at a time, and system time setting to keep the data in reference to the correct time of day. A modular piece of the hardware could then be taken to a source of internet (via WiFi or ethernet connection) to then upload its accumulated data. This system now runs successfully in multiple locations in remote Alaska transforming human waste into energy and biochar.',
+            technologies: ["Embedded Control Systems", "HMI Applications", "Data Acquisition", "Data Analytics", "Off-Grid Distributed Systems"],
+            image: './icons/kivalina.jpg',
           },
         },
     ]
@@ -41,7 +57,7 @@ const App: React.FC = () => {
           content: {
             description: 'My first programming language! I have done work with java for Web Development, Embedded Systems, Android Applications, HMI Applications, and more!',
             technologies: ['JavaFX', 'Maven', 'Gradle', 'Vaadin', 'Android Studio'],
-            image: '../icons/Java.png',
+            image: './icons/Java.png',
           },
         },
         {
@@ -321,19 +337,25 @@ const App: React.FC = () => {
 
   return (
     <div className="os-container">
-      <Desktop 
-        projects={projects} 
-        onOpenFile={openFile} 
-      />
-      
-      {openWindows.map((window) => (
-        <Window
-          key={window.id}
-          file={window}
-          onClose={() => closeWindow(window.id)}
-          onOpenFile={openFile}
-        />
-      ))}
+      {isMobile ? (
+        <MobileWarning />
+      ) : (
+        <>
+          <Desktop 
+            projects={projects} 
+            onOpenFile={openFile} 
+          />
+          
+          {openWindows.map((window) => (
+            <Window
+              key={window.id}
+              file={window}
+              onClose={() => closeWindow(window.id)}
+              onOpenFile={openFile}
+            />
+          ))}
+        </>
+      )}
     </div>
   );
 };

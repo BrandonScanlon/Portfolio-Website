@@ -1,16 +1,21 @@
 .window {
-    position: absolute;
+    position:fixed;
     width: 600px;
     min-height: 400px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    left: calc(50vw - 300px);
+    top: calc(50vh - 200px);
+    
+    max-width: 90vw;
+    max-height: 90vh;
   }
   
   .window-header {
     height: 30px;
-    background: linear-gradient(to bottom, #0058e6, #0038a6);
+    background: linear-gradient(to bottom, #19679b, #0a4770);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -23,11 +28,15 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    text-align: center;
   }
   
   .window-icon {
     width: 20px;
     height: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
   
   .window-close {

@@ -37,11 +37,6 @@ const Window: React.FC<WindowProps> = ({ file, onClose, onOpenFile }) => {
   return (
     <div 
       className="window"
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        zIndex: 1000
-      }}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
