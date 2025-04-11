@@ -13,12 +13,19 @@ const App: React.FC = () => {
       title: 'Projects',
       icon: './icons/folder.png',
       type: 'folder',
-      content: {
-        description: 'E-commerce platform with React/Node',
-        technologies: ['React', 'Node.js', 'MongoDB'],
-        image: '/projects/ecom-screenshot.jpg',
-        link: 'https://example.com/project1',
-      },
+      files: [
+        {
+          id: 'proj1',
+          title: 'Coming Soon!',
+          icon: './icons/white.png',
+          type: 'document',
+          content: {
+            description: '',
+            technologies: [],
+            image: './icons/white.png',
+          },
+        },
+    ]
     },
     {
       id: 'skills',
@@ -43,7 +50,7 @@ const App: React.FC = () => {
           icon: './icons/Python.png',
           type: 'document',
           content: {
-            description: 'Snake: "Tssss..." I have leveraged Python for a number of use cases professionally: data aquisition, scripting, Machine Learning, Artificial Intelligence, and web scraping.',
+            description: 'I have leveraged Python for a number of use cases professionally: data aquisition, scripting, Machine Learning, Artificial Intelligence, and web scraping.',
             technologies: ['TensorFlow', 'Scikit-learn', 'PyTorch', 'NumPy', 'SciPy', 'Pandas', 'Django'],
             image: './icons/Python.png',
           },
@@ -54,7 +61,7 @@ const App: React.FC = () => {
           icon: './icons/PHP.png',
           type: 'document',
           content: {
-            description: 'I have utilized PHP for RESTful APIs connecting all of our applications to an RDS MySQL database. I have also used PHP for custom email, SMS, and push notifications based on real-world data from physical systems.',
+            description: 'I have utilized PHP for RESTful APIs connecting multiple applications to databases. I have also used PHP for custom email, SMS, and push notifications based on real-world data from physical systems.',
             technologies: ['Laravel', 'REST', 'JSON', 'APIs', 'MySQL', 'Email Notifications', 'SMS Notifications', 'Push Notifications'],
             image: './icons/PHP.png',
           },
@@ -65,7 +72,7 @@ const App: React.FC = () => {
           icon: './icons/C.png',
           type: 'document',
           content: {
-            description: 'I have used C / embedded C for the control logic and hardware interfacing on a complex, custom microcontroller used to control Biogenic Refineries deployed in the field.',
+            description: 'I have used C / embedded C for control logic and hardware interfacing on a complex, custom microcontroller used to control Biogenic Refineries, by Biomass Controls PBC, deployed in the field.',
             technologies: ['Embedded C', 'Microcontrollers', 'Control Logic', 'Hardware Interfacing', 'Modbus', 'CAN Bus'],
             image: './icons/C.png',
           },
@@ -76,7 +83,7 @@ const App: React.FC = () => {
           icon: './icons/C++.png',
           type: 'document',
           content: {
-            description: 'I have used C++ to replace the existing embedded C controller code with a more robust, object-oriented design. In doing so, I have begun to research, test, and implement Machine Learning models to replace the previously used PID controllers.',
+            description: 'I have used C++ to begin replacing the existing embedded C controller code with a more robust, object-oriented design. In doing so, I have begun to research, test, and implement Machine Learning models to replace the previously used PID controllers.',
             technologies: ['TensorFlow', 'Caffe', 'Armadillo', 'FANN'],
             image: './icons/C++.png',
           },
@@ -98,7 +105,7 @@ const App: React.FC = () => {
           icon: './icons/Swift.png',
           type: 'document',
           content: {
-            description: 'I have been slowly converting the existing iOS Application Objective-C code to Swift. I have also been working on a UI/UX overhaul of the existing iOS application.',
+            description: 'I have been slowly converting the existing iOS Application\'s Objective-C code to Swift. I have also been working on a UI/UX overhaul of the existing iOS Application.',
             technologies: ['iOS Application Development', 'SwiftUI'],
             image: './icons/Swift.png',
           },
@@ -109,7 +116,7 @@ const App: React.FC = () => {
           icon: './icons/Kotlin.png',
           type: 'document',
           content: {
-            description: 'I have been slowly converting the existing Android Application Java code to Kotlin. I have also been working on a UI/UX overhaul of the existing Android application.',
+            description: 'I have been slowly converting the existing Android Application Java code to Kotlin. I have also been working on another UI/UX overhaul of the existing Android Application using Kotlin.',
             technologies: ['Android Application Development'],
             image: './icons/Kotlin.png',
           },
@@ -120,7 +127,7 @@ const App: React.FC = () => {
           icon: './icons/GoLang.png',
           type: 'document',
           content: {
-            description: 'I have dabbled in Go to replace the 150+ APIs Biomass Controls PBC has which are all currently written in PHP in production.',
+            description: 'I have dabbled in Go to eventually replace the 150+ APIs Biomass Controls PBC has which are all currently written in PHP for production.',
             technologies: ['APIs', 'REST', 'JSON'],
             image: './icons/GoLang.png',
           },
@@ -131,7 +138,7 @@ const App: React.FC = () => {
           icon: './icons/MySQL.png',
           type: 'document',
           content: {
-            description: 'MySQL I the database language that was chosen for Biomass Controls\' technology stack originally. I have used MySQL for all of the data aquisition, storage, and analytics for the Biogenic Refineries and subsequent applications.',
+            description: 'MySQL is the database language that was chosen for Biomass Controls\' technology stack originally. I have used MySQL for all of the data aquisition, storage, and analytics for the Biogenic Refineries and subsequent applications, as well as, on other projects in the past.',
             technologies: ['SQL', 'RDS', 'Databases'],
             image: './icons/MySQL.png',
           },
@@ -142,7 +149,7 @@ const App: React.FC = () => {
           icon: './icons/JavaScript.png',
           type: 'document',
           content: {
-            description: 'I have maintained and developed new features for a web application written in React/Redux via JavaScript. This web application is used to reflect all of the data collected from the many Biogenic Refineries Biomass Controls PBC has in the field. The app features data analytics, complex rgaphinh, system controls, sensor monitoring, etc.',
+            description: 'I have maintained and developed new features for a web application written in React/Redux via JavaScript. This web application is used to reflect all of the data collected from the many Biogenic Refineries Biomass Controls PBC has in the field. The app features data analytics, complex graphing, system controls, sensor monitoring, and more.',
             technologies: ['AmCharts', 'React', 'Redux', 'Node.js'],
             image: './icons/JavaScript.png',
           },
@@ -153,7 +160,7 @@ const App: React.FC = () => {
           icon: './icons/TypeScript.png',
           type: 'document',
           content: {
-            description: 'TypeScript was my backend language of choice for the new web application I have been developing to replace Biomass Controls\' original web application. I chose it over JavaScript because it is statically typed, has enhanced IDE support, and is more maintainable in the long run.',
+            description: 'TypeScript was my backend language of choice for the new Web Application I have been developing to replace Biomass Controls\' original Web Application. I chose it over JavaScript since it is statically typed, has enhanced IDE support, and is more maintainable in the long run.',
             technologies: ['React', 'Node.js'],
             image: './icons/TypeScript.png',
           },
@@ -164,7 +171,7 @@ const App: React.FC = () => {
           icon: './icons/CSS.png',
           type: 'document',
           content: {
-            description: 'Cascading Style Sheets is essential to make any web application look pretty!',
+            description: 'Cascading Style Sheets is essential to make any Web Application look pretty!',
             technologies: ['CSS3', 'SASS', 'Bootstrap'],
             image: './icons/CSS.png',
           },
@@ -175,7 +182,7 @@ const App: React.FC = () => {
           icon: './icons/HTML.png',
           type: 'document',
           content: {
-            description: 'Another essential web technology. I have used HTML to create the structure of the web applications I have developed.',
+            description: 'Another essential web technology. I have used HTML to create the structure of all of the different Web Applications I have developed. Including this one!',
             technologies: ['HTML5'],
             image: './icons/HTML.png',
           },
@@ -186,7 +193,7 @@ const App: React.FC = () => {
           icon: './icons/Bash.png',
           type: 'document',
           content: {
-            description: 'Bash? More like BASH! I have used bash for scripting, automation, and data aquisition on various Linux systems.',
+            description: 'I have used bash for scripting, embedded automation, and data aquisition on various Linux systems.',
             technologies: ['Shell Scripting', 'Automation', 'Linux'],
             image: './icons/Bash.png',
           },
@@ -197,7 +204,7 @@ const App: React.FC = () => {
           icon: './icons/Dart.png',
           type: 'document',
           content: {
-            description: 'Dart, what a cool programming language. I have used Dart for mobile application development with Flutter. I have worked on replacing all three applications Biomass Controls has with Flutter to easily maintain one codebase for iOS and Android, and Web.',
+            description: 'I have used Dart for mobile application development with the Flutter framework. I have worked on replacing all three applications Biomass Controls has with Flutter to easily maintain one codebase for iOS and Android, and Web.',
             technologies: ['Flutter', 'Mobile Application Development'],
             image: './icons/Dart.png',
           },
@@ -208,7 +215,7 @@ const App: React.FC = () => {
           icon: './icons/LaTeX.png',
           type: 'document',
           content: {
-            description: 'I have used LaTeX primarily for educational projects, but I have also used it for documentation and reports.',
+            description: 'I have used LaTeX primarily for educational projects for documentation reports, and homework.',
             technologies: ['Documentation', 'Mathematics'],
             image: './icons/LaTeX.png',
           },
@@ -219,7 +226,7 @@ const App: React.FC = () => {
           icon: './icons/R.png',
           type: 'document',
           content: {
-            description: 'I have used R for data analysis, statistics, and machine learning. I have also used R for data visualization.',
+            description: 'I have used R for data analysis, statistics, and Machine Learning. Additionally, I have used R for data visualization.',
             technologies: ['Data Visualization', 'Data Analysis', 'Statistics', 'Machine Learning', 'RStudio'],
             image: './icons/R.png',
           },
@@ -249,8 +256,8 @@ const App: React.FC = () => {
           icon: './icons/Linux.png',
           type: 'document',
           content: {
-            description: 'Critical for embedded systems development, and a great OS for development in general.',
-            technologies: ['Apache:2', 'Nginx'],
+            description: 'I have used Linux as my platform of choice for embedded systems development and cloud servers.',
+            technologies: ['Apache', 'Nginx'],
             image: './icons/Linux.png',
           },
         },
@@ -261,7 +268,7 @@ const App: React.FC = () => {
           type: 'document',
           content: {
             description: 'I have utilized a number of AWS services from ECS, RDS, S3, SNS, and more to host web applications, databases, deliver custom notifications, and connect services together.',
-            technologies: ['ECS', 'ECR', 'RDS', 'S3', 'SNS', 'CloudFormation', 'EC2', 'Route53', 'SES', 'IAM'],
+            technologies: ['ECS', 'ECR', 'RDS', 'S3', 'SNS', 'CloudFormation', 'EC2', 'Route53', 'SES', 'IAM', "Amplify"],
             image: './icons/AWS.png',
           },
         },
@@ -293,7 +300,7 @@ const App: React.FC = () => {
           icon: './icons/Docker.png',
           type: 'document',
           content: {
-            description: 'Biomass Controls\' original web application was hosted on a Docker container in a monolothic structure (among other services). I have since broken it down into separate microservices for different use cases and maintainability.',
+            description: 'Biomass Controls\' original web application was hosted in a Docker container that was apart of a monolothic structure (among other services). I have since broken it down into separate microservices for different use cases and maintainability.',
             technologies: ['Web Application Hosting'],
             image: './icons/Docker.png',
           },
